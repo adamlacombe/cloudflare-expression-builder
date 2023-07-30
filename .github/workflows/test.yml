@@ -1,0 +1,28 @@
+name: Deno Test
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Deno
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: 1.x
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/deno
+        key: ${{ runner.os }}-deno-${{ hashFiles('**/deno.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-deno-
+
+    - name: Run tests
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      run: deno test --check --unstable --allow-all
