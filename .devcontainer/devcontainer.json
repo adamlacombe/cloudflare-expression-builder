@@ -1,0 +1,21 @@
+{
+	"name": "Default Linux Universal",
+	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/deno:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+        "GitHub.copilot-chat",
+				"denoland.vscode-deno",
+				"streetsidesoftware.code-spell-checker",
+				"esbenp.prettier-vscode",
+				"redhat.vscode-xml",
+				"ryuta46.multi-command",
+				"eamodio.gitlens"
+			]
+		}
+	}
+}
