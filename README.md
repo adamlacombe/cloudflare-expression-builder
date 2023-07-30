@@ -19,7 +19,7 @@ to ensure the expression is valid.
 Here's an example of how to use the ExpressionBuilder:
 
 ```typescript
-import { ExpressionBuilder } from "https://deno.land/x/cloudflare-expression-builder/mod.ts";
+import { ExpressionBuilder } from "https://deno.land/x/cloudflare_expression_builder/mod.ts";
 
 const builder = new ExpressionBuilder();
 builder.addExpression("ip.src", "==", "1.2.3.4")
