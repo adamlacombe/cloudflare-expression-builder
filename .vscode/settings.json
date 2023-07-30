@@ -1,0 +1,35 @@
+{
+  "deno.enable": true,
+  "deno.lint": false,
+  "deno.unstable": true,
+  "editor.tabSize": 2,
+  "deno.suggest.autoImports": true,
+  "deno.documentPreloadLimit": 4000,
+  "editor.disableMonospaceOptimizations": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "denoland.vscode-deno",
+  "files.autoSave": "off",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.formatDocument",
+      "sequence": [
+        "editor.action.formatDocument",
+        "editor.action.organizeImports"
+      ]
+    }
+  ],
+  "github.copilot.advanced": {
+    "inlineSuggestCount": 5,
+    "listCount": 5,
+    "indentationMode": {
+      "*": true
+    }
+  },
+  "github.copilot.inlineSuggest.enable": true
+}
