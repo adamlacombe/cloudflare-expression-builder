@@ -1,6 +1,6 @@
 {
-	"name": "Default Linux Universal",
-	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+	"name": "Default Linux",
+	"image": "mcr.microsoft.com/devcontainers/base",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/deno:1": {}
 	},
@@ -8,7 +8,7 @@
 		"vscode": {
 			"extensions": [
 				"GitHub.copilot",
-        "GitHub.copilot-chat",
+        			"GitHub.copilot-chat",
 				"denoland.vscode-deno",
 				"streetsidesoftware.code-spell-checker",
 				"esbenp.prettier-vscode",
